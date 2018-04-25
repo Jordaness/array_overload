@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fancy Array</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var arr = ["James", "Jill", "Jack", "Jane", "Thomas"];
+
+        function printArr(arr, str, reversed){
+            if(typeof str == "undefined")
+                str = " -> ";
+            if(typeof reversed == "undefined"){
+                for(var i = 0; i < arr.length; i++){
+                     console.log(i + str + arr[i]);
+                }
+            }
+            else if(reversed == true){
+                for(var i = arr.length-1; i >= 0; i--){
+                     console.log(i + str + arr[i]);
+                }
+            }
+            else{
+                for(var i = 0; i< arr.length; i++){
+                     console.log(i + str + arr[i]);
+                }
+            }
+        }
+
+        printArr(arr, "------", false);
+    </script>
+</body>
+</html>
